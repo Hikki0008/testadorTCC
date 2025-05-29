@@ -1,0 +1,87 @@
+Atividade 1: Cadastro e Gerenciamento de Usuários
+Início
+
+Usuário cria cadastro (Cliente ou Profissional)
+
+Sistema valida dados (incluindo validação de certificação para Profissional)
+
+Usuário confirma cadastro
+
+Fim
+
+Atividade 2: Gestão de Paciente e Comorbidades
+Início
+
+Cliente adiciona paciente(s)
+
+Adiciona ou atualiza comorbidades do paciente
+
+Salva dados de saúde
+
+Fim
+
+Atividade 3: Agendamento de Serviço
+Início
+
+Cliente seleciona paciente e profissional
+
+Escolhe data e horário disponíveis
+
+Sistema verifica disponibilidade
+
+Confirma agendamento
+
+Gera notificação para profissional e cliente
+
+Fim
+
+Atividade 4: Gerenciamento de Atividades de Cuidados
+Início
+
+Profissional/Responsável cria atividades para paciente
+
+Define horários, frequência e observações
+
+Paciente ou responsável visualiza atividades
+
+Marca atividades como realizadas (checagens)
+
+Sistema registra status das atividades
+
+Fim
+
+Atividade 5: Monitoramento de Dados Vitais
+Início
+
+Profissional ou responsável registra dados vitais (batimentos, pressão, glicemia, etc.)
+
+Dados são armazenados e disponibilizados para visualização histórica
+
+Sistema gera alertas em caso de valores críticos (futuro)
+
+Fim
+
+Atividade 6: Comunicação e Suporte
+Início
+
+Cliente, paciente e profissional podem iniciar conversas privadas
+
+Troca de mensagens em tempo real
+
+Abertura de tickets de suporte para dúvidas e problemas
+
+Suporte responde e acompanha status
+
+Fim
+
+Atividade 7: Financeiro e Pagamentos
+Início
+
+Cliente realiza pagamento por serviço
+
+Sistema confirma pagamento e gera faturas
+
+Notificações enviadas para cliente e profissional
+
+Fim
+
