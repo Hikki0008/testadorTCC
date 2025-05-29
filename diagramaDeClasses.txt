@@ -1,0 +1,324 @@
+✅ Diagrama de Classes — COMPLETO e ATUALIZADO (Texto)
+🔹 Núcleo de Usuário
+Usuário (Abstrata)
+
+id
+
+nome
+
+email
+
+senha
+
+telefone
+
+tipo (cliente | profissional)
+
+Cliente (Herda Usuário)
+
+data_nascimento (opcional)
+
+observacoes_gerais
+
+Paciente
+
+id
+
+cliente_id (responsável)
+
+nome
+
+data_nascimento
+
+sexo
+
+telefone (opcional)
+
+observacoes
+
+Profissional (Herda Usuário)
+
+especialidade
+
+descricao
+
+localizacao
+
+disponibilidade
+
+preco_por_hora
+
+avaliacao_media
+
+status_certificacao (pendente, verificado, rejeitado)
+
+Certificacao
+
+id
+
+profissional_id
+
+tipo (Coren, curso técnico, superior, etc.)
+
+numero_registro
+
+entidade_emissora
+
+data_emissao
+
+data_validade (opcional)
+
+documento_url
+
+status (pendente, aprovado, rejeitado)
+
+observacoes_validacao
+
+🔹 Saúde e Atendimento
+Comorbidade
+
+id
+
+nome
+
+descricao
+
+PacienteComorbidade
+
+paciente_id
+
+comorbidade_id
+
+Servico
+
+id
+
+cliente_id
+
+paciente_id
+
+profissional_id
+
+agendamento_id
+
+status (pendente, confirmado, concluído, cancelado)
+
+observacoes
+
+Agendamento
+
+id
+
+data
+
+hora_inicio
+
+hora_fim
+
+status (livre, reservado, concluído, cancelado)
+
+Avaliacao
+
+id
+
+servico_id
+
+nota (1 a 5)
+
+comentario
+
+Prontuario
+
+id
+
+paciente_id
+
+profissional_id
+
+data_criacao
+
+descricao_geral
+
+anexos
+
+observacoes
+
+HistoricoAtendimento
+
+id
+
+servico_id
+
+data
+
+relatorio
+
+profissional_id
+
+🔹 Plano de Cuidados e Monitoramento
+AtividadeCuidado
+
+id
+
+paciente_id
+
+profissional_id (quem criou)
+
+descricao
+
+tipo (medicamento, higiene, alimentação, repouso, exercício, outro)
+
+frequencia (diária, semanal, único, sob demanda)
+
+horario (lista ou string)
+
+data_inicio
+
+data_fim (opcional)
+
+observacoes
+
+ChecagemAtividade
+
+id
+
+atividade_id
+
+data_hora
+
+realizado_por (profissional_id ou cliente_id)
+
+status (realizado, não realizado, adiado, cancelado)
+
+observacoes
+
+MonitoramentoVital
+
+id
+
+paciente_id
+
+profissional_id (opcional)
+
+data_hora
+
+tipo (pressao_arterial, batimentos, glicemia, saturacao, temperatura, outro)
+
+valor
+
+unidade
+
+observacoes
+
+🔹 Comunicação
+Conversa
+
+id
+
+tipo (cliente_profissional | paciente_profissional)
+
+cliente_id (opcional)
+
+paciente_id (opcional)
+
+profissional_id
+
+data_criacao
+
+status (ativa, encerrada)
+
+Mensagem
+
+id
+
+conversa_id
+
+remetente_id (Usuário)
+
+conteudo
+
+data_envio
+
+lido (boolean)
+
+TicketSuporte
+
+id
+
+usuario_id
+
+assunto
+
+descricao
+
+data_abertura
+
+status (aberto, andamento, encerrado)
+
+data_encerramento
+
+MensagemSuporte
+
+id
+
+ticket_id
+
+remetente_id
+
+conteudo
+
+data_envio
+
+lido
+
+🔹 Financeiro
+Pagamento
+
+id
+
+servico_id
+
+cliente_id
+
+data_pagamento
+
+valor
+
+metodo (cartao, pix, boleto, transferencia)
+
+status (pendente, pago, recusado, estornado)
+
+comprovante_url
+
+observacoes
+
+Fatura
+
+id
+
+cliente_id
+
+data_emissao
+
+data_vencimento
+
+valor_total
+
+status (pendente, pago, atrasado, cancelado)
+
+🔹 Notificações
+Notificacao
+
+id
+
+usuario_id
+
+titulo
+
+mensagem
+
+tipo (sistema, agendamento, pagamento, suporte, cuidado)
+
+data_envio
+
+lida (boolean)
